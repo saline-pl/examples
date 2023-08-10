@@ -1,0 +1,10 @@
+fn are_anagrams :: first: String, second: String -> Bool
+{* Returns whenever `first` is the anagram of `second`. *}
+do
+   ret first.as_sorted() == second.as_sorted()
+end
+
+fn main :: args: List(String) -> Ord
+do
+   are_anagrams("race", "care").println()  {* Prints `TRUE` *}
+end
