@@ -1,0 +1,20 @@
+{*
+   In Saline, `Char` is a refinement type from `String`.
+   It can be roughly defined as follows:
+      type Char = { s: String & s.len() == 1 }
+   
+   For that matter, there is a built-in function `ascii_value` which signature is:
+      fn ascii_value :: c: Char -> Ord
+   
+   Because its first argument is of type `Char`, the former is automatically registered as
+   a method of the latter.
+
+   In other words, if you have a string `s` that is guaranteed to have a length of 1 at compilation,
+   you can get its ascii value by writing `s.ascii_value()`!
+*}
+
+fn main :: args: List(String) -> Ord
+do
+   let c = "A"
+   c.ascii_value().println()  {* prints `65` *}
+end
