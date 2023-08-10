@@ -1,0 +1,12 @@
+fn to_fahreinheit :: value: Real -> Real
+{* Given a temperature in Celsius, returns it converted to Fahreinheit. *}
+do
+   return value * 1.8 + 32
+end
+
+fn main :: args: List(String) -> Ord
+do
+   let temp_celsius = 30.0
+   let temp_fahreinheit = temp_celsius.to_fahreinheit()
+   "{temp_celsius}°C = {temp_fahreinheit}°F".println()
+end
