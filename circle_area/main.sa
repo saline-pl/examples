@@ -1,0 +1,20 @@
+{*
+   Pi is already defined in the `math` module of the standard library, but since the
+   import syntax has not been stabilized yet, we're going to use our own `pi`.
+*}
+
+let pi = 3.14159  {* 5 digits precision is good enough *}
+
+
+{* since we're going to square, the result is guaranteed to be >= 0 *}
+fn circle_area :: radius: Real -> { r: Real & r >= 0.0 }
+do
+   return pi * radius ^ 2
+end
+
+fn main :: args: List(String) -> Ord
+do
+   let radius = 6.0
+   let area = radius.circle_area()
+   "The circle of radius {radius}cm has an area of {area}cm²".println()
+end
