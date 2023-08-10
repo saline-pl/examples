@@ -1,0 +1,6 @@
+fn main :: args: List(String) -> Ord
+do
+   let s = "hello world"
+
+   s.reverse().println()  {* prints `dlrow olleh` *}
+end

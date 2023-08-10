@@ -1,0 +1,6 @@
+fn main :: args: List(String) -> Ord
+do
+   let l = [27, -6, 1, 0, 15]
+
+   l.as_sorted().println()  {* prints `[-6, 0, 1, 15, 27]` *}
+end
