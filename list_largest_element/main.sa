@@ -1,0 +1,6 @@
+fn main :: args: List(String) -> Ord
+do
+   let l = [16, 2, 23, -15, 18]
+
+   l.max().println()  {* prints `23` *}
+end

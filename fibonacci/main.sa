@@ -1,0 +1,19 @@
+fn fibonacci :: n: Ord -> Ord
+{* Recursive function that calculates the `n`-th member of the fibonacci sequence *}
+do
+   if n <= 1 do
+      ret n
+   else do
+      ret fib(n - 2) + fib(n - 1)
+   end
+end
+
+fn main :: args: List(String) -> Ord
+do
+   let n = 50
+
+   for i in 0..=n
+   do
+      i.fib().println()
+   end
+end

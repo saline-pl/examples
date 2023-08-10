@@ -1,0 +1,37 @@
+fn isqrt :: n: Ord -> Ord
+{* `math.isqrt` (poorly) reimplemented... *}
+do
+   ret sqrt(n).sqrt().round()
+end
+
+fn is_prime :: n: Ord -> Bool
+do
+   if n <= 3 do
+      ret n > 1
+   else if n % 2 == 0 | n % 3 == 0 do
+      ret FALSE
+   end
+
+   let limit = isqrt(n)
+
+   for i in (5..=limit + 1).step_by(6)
+   do
+      if n % i == 0 | n % (i + 2) == 0 do
+         ret FALSE
+      end
+   end
+
+   ret TRUE
+end
+
+type Prime = { n: Ord & n.is_prime() }
+
+
+fn main :: args: List(String) -> Ord
+do
+   let n = 23
+   let p = 16
+
+   n.is<Prime>().println()  {* prints `TRUE` *}
+   p.is_prime().println()  {* prints `FALSE` *}
+end

@@ -1,0 +1,10 @@
+type Palindrome = { s: String & s == s.reverse() }
+
+fn main :: args: List(String) -> Ord
+do
+   let w1 = "kayak"
+   let w2 = "burger"
+
+   w1.is<Palindrome>().println()  {* prints `TRUE` *}
+   w2.is<Palindrome>().println()  {* prints `FALSE` *}
+end
