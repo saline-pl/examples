@@ -1,0 +1,24 @@
+{*
+   Again, `factorial` is a function that exists in the `math` module.
+   See `circle_area` note about pi to understand why we don't use the library here.
+*}
+
+fn factorial :: n: Ord -> Ord
+{* Recursive function that calculates `n`! *}
+do
+   if n <= 1 do
+      ret 1
+   else do
+      ret n * factorial(n - 1)
+   end
+end
+
+fn main :: args: List(String) -> Ord
+do
+   let n = 10
+   
+   for i in 0..=n
+   do
+      i.factorial().println()
+   end
+end
