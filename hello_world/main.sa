@@ -1,4 +1,0 @@
-fn main :: args: List(String) -> Ord
-do
-   println("Hello World!")
-end

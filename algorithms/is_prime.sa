@@ -5,6 +5,10 @@ do
 end
 
 fn is_prime :: n: Ord -> Bool
+{*
+   Adaptation of the Python code from the Primary test Wikipedia page:
+   <https://en.wikipedia.org/wiki/Primality_test#Python>
+*}
 do
    if n <= 3 do
       ret n > 1
@@ -32,6 +36,7 @@ do
    let n = 23
    let p = 16
 
+   {* Note: the `fn<Type>()` syntax has not been stabilized yet *}
    n.is<Prime>().println()  {* prints `TRUE` *}
    p.is_prime().println()  {* prints `FALSE` *}
 end
