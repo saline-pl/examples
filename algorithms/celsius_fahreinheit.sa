@@ -8,5 +8,6 @@ fn main :: args: List(String) -> Ord
 do
    let temp_celsius = 30.0
    let temp_fahreinheit = temp_celsius.to_fahreinheit()
-   "{temp_celsius}°C = {temp_fahreinheit}°F".println()
+   
+   println("{temp_celsius}°C = {temp_fahreinheit}°F")
 end

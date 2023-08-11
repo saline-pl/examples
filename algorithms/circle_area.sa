@@ -17,5 +17,5 @@ do
    let radius = 6.0
    let area = radius.circle_area()
 
-   "The circle of radius {radius}cm has an area of {area}cm²".println()
+   println("The circle of radius {radius}cm has an area of {area}cm²")
 end

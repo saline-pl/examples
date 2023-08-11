@@ -15,6 +15,5 @@
 
 fn main :: args: List(String) -> Ord
 do
-   let c = "A"
-   c.ascii_value().println()  {* prints `65` *}
+   "A".ascii_value().println()  {* prints `65` *}
 end

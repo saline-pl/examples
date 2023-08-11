@@ -1,10 +1,11 @@
-type Palindrome = { s: String & s == s.reverse() }
+type Palindrome = { s: String & s == s.as_reversed() }
 
 fn main :: args: List(String) -> Ord
 do
    let w1 = "kayak"
    let w2 = "burger"
 
+   {* Note: the `fn<Type>()` syntax has not been stabilized yet *}
    w1.is<Palindrome>().println()  {* prints `TRUE` *}
    w2.is<Palindrome>().println()  {* prints `FALSE` *}
 end
