@@ -1,7 +1,7 @@
 fn isqrt :: n: Ord -> Ord
 {* `math.isqrt` (poorly) reimplemented... *}
 do
-   ret sqrt(n).sqrt().round()
+   ret sqrt(n).round()
 end
 
 fn is_prime :: n: Ord -> Bool
